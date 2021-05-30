@@ -1,0 +1,16 @@
+version: "3.3"
+
+services:
+    db:
+        image: mysql:5.7
+        restart: always
+        environment:
+            MYSQL_ROOT_PASSWORD: dontdothis
+            MYSQL_DATABASE: dontdothis
+
+    web:
+        depends_on:
+            - db
+        image: nginxdemos/hello
+        ports:
+            - "80:80"
