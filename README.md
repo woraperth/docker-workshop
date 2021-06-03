@@ -1,4 +1,4 @@
-# Docker-compose Demo
+# Docker Workshop Demo
 
 Docker-compose demo for R2DE.
 
