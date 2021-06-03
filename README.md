@@ -32,4 +32,20 @@ Then, after initialization, start all containers:
 docker-compose up -d
 ```
 
-In the example dag in `dags/`, don't forget to apply database credential. And please do not commit passwords or credential to git.
+In the example dag in `dags/`, don't forget to apply database credentials. And please do not commit passwords or credential to git.
+
+## Keeping credentials in Environment Variables
+
+In directory `airflow-env-vars/` contains the demo that requires to keep credentials in `.env` files. Then those variables will be set in container by `docker-compose.yml` in `environment:` section.
+
+The example of `.env` file:
+```
+AIRFLOW_UID=
+AIRFLOW_GID=
+MYSQL_HOST=
+MYSQL_PORT=
+MYSQL_USER=
+MYSQL_PASSWORD=
+MYSQL_DB=
+MYSQL_CHARSET=
+```
